@@ -948,12 +948,13 @@ border: 3px solid orange;
 /* footer */
 
 footer{
-  background-color: linear-gradient(to top, 
-  #eeff00 0%,  /* Dark yellow-orange at the bottom */
-  #fffa65 30%,  /* Bright yellow in the middle */
-  #d95b43 70%,  /* Vibrant orange-red at the top */
-  #b23e2f 100%  /* Dark red-orange again for a subtle loop */
-);
+ /* background-color: linear-gradient(to top, 
+  #eeff00 0%,
+  #fffa65 30%,
+  #d95b43 70%,
+  #b23e2f 100%
+);*/
+background-color:orange;
   color: white; 
 }
 .footerContainer{
