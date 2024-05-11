@@ -68,7 +68,6 @@
 
 @keyframes pulsate1 {
   0% {
-    
     box-shadow:
       0 0 1px #ffb347, /* No shadow initially */
       0 0 4px #ffa726,
@@ -117,6 +116,7 @@
   font-family: "Sriracha", cursive;
   font-weight: 400;
   font-style: normal;
+  
 
 }
 section{
@@ -128,6 +128,7 @@ section{
   width: 100%;
   height: auto;
   background-color: #0d1015;
+  z-index: 10;
 }
 .image{
   padding-top: 50px;
@@ -143,7 +144,7 @@ img{
   height: auto; /* Adjust the height as needed */
   border-radius: 50%; /* Creates a circle */
   /* background: radial-gradient(circle at center, #ffb347, #ffb347 20%);  */
-  animation: pulsate1 1s ease-in-out infinite; /
+  animation: pulsate1 2s ease-in-out infinite; /
 }
 
 .home .text{
@@ -151,33 +152,39 @@ img{
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  color: #333333;
+  color: #ffffff;
   font-size: 45px;
-  animation: pulsate 2.5s infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .avinya{
   font-size: 100px;
   font-weight: 600;
-  color: linear-gradient(to top, 
-  #b23e2f 0%,  /* Dark red-orange at the bottom */
-  #fffa65 30%,  /* Bright yellow in the middle */
-  #d95b43 70%,  /* Vibrant orange-red at the top */
-  #b23e2f 100%  /* Dark red-orange again for a subtle loop */
-);
+animation: pulsate 2.5s infinite alternate;
 
 }
 
-.home .text .cse{
+.home .text .cse , .dates{
   font-family: "Kaushan Script", cursive;
   font-weight: 400;
   font-style: normal;
   display: flex;
   flex-direction: column;
   font-size: 40px;
+  color: #fff;
+  animation: pulsate 2.5s infinite alternate;
+
   
 }
 
+.home .text .dates{
+  font-size: 20px;
+  animation: none;
+  color: #fff;
+}
 .about{
   font-family: "Sriracha", cursive;
   font-weight: 400;
@@ -705,7 +712,7 @@ time {
   /* padding: 50px 0px; */
   height: auto;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -941,8 +948,13 @@ border: 3px solid orange;
 /* footer */
 
 footer{
-  background-color: rgb(255, 166, 0);
-  color: white;
+  background-color: linear-gradient(to top, 
+  #eeff00 0%,  /* Dark yellow-orange at the bottom */
+  #fffa65 30%,  /* Bright yellow in the middle */
+  #d95b43 70%,  /* Vibrant orange-red at the top */
+  #b23e2f 100%  /* Dark red-orange again for a subtle loop */
+);
+  color: white; 
 }
 .footerContainer{
   width: 100%;
@@ -1024,3 +1036,4 @@ footer{
       margin: 4px;
   }
 }
+
