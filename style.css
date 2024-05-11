@@ -66,6 +66,42 @@
   }
 }
 
+@keyframes pulsate1 {
+  0% {
+    
+    box-shadow:
+      0 0 1px #ffb347, /* No shadow initially */
+      0 0 4px #ffa726,
+      0 0 7px #ff8c00,
+      0 0 11px #ffb347,
+      0 0 17px #d95b43,
+      0 0 22px #ffb347,
+      0 0 25px #9d2932,
+      0 0 38px #66171f;
+  }
+  50% {
+    box-shadow:
+      0 0 3px #ffb347, /* Inner orange, increased size */
+      0 0 6px #ffa726, /* Lighter orange */
+      0 0 9px #ff8c00, /* Dark orange */
+      0 0 13px #ffb347, /* Orange again for smoother transition */
+      0 0 19px #d95b43, /* Dark red */
+      0 0 23px #ffb347, /* Orange again */
+      0 0 27px #9d2932, /* Darker red */
+      0 0 40px #66171f; /* Outermost darkest red */
+  }
+  100% {
+    box-shadow:
+      0 0 1px #ffb347, /* No shadow initially */
+      0 0 4px #ffa726,
+      0 0 7px #ff8c00,
+      0 0 11px #ffb347,
+      0 0 17px #d95b43,
+      0 0 22px #ffb347,
+      0 0 25px #9d2932,
+      0 0 38px #66171f;
+  }
+}
 
 
 *{
@@ -78,6 +114,9 @@
   display: flex;
   flex-direction: column;
   background-color: #0d1015;
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
 
 }
 section{
@@ -90,14 +129,26 @@ section{
   height: auto;
   background-color: #0d1015;
 }
+.image{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+
+}
 
 img{
-  width: 100%;
+    width: 95%;
+  /* width: 100px; Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+  border-radius: 50%; /* Creates a circle */
+  /* background: radial-gradient(circle at center, #ffb347, #ffb347 20%);  */
+  animation: pulsate1 1s ease-in-out infinite; /
 }
 
 .home .text{
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
   font-style: normal;
   text-align: center;
   color: #333333;
@@ -107,17 +158,30 @@ img{
 
 .avinya{
   font-size: 100px;
-  font-weight: 800;
+  font-weight: 600;
+  color: linear-gradient(to top, 
+  #b23e2f 0%,  /* Dark red-orange at the bottom */
+  #fffa65 30%,  /* Bright yellow in the middle */
+  #d95b43 70%,  /* Vibrant orange-red at the top */
+  #b23e2f 100%  /* Dark red-orange again for a subtle loop */
+);
 
 }
 
 .home .text .cse{
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   font-size: 40px;
+  
 }
 
 .about{
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
   height: auto;
   width: 100%;
   padding: 10px;
@@ -156,6 +220,7 @@ img{
   .home img{
     height:300px;
     width: 300px;
+
   }
 
   .home .text{
@@ -190,8 +255,8 @@ img{
   }
   .home img{
     position: relative;
-    height:auto;
-    width: auto;
+    height:100%;
+    width: 100%;
   }
 
   .home .text{
@@ -611,12 +676,14 @@ time {
   flex-direction: column;
 }
 .events h3{
+  text-transform: capitalize;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: center;
   font-size: 35px;
-  color: rgb(255, 255, 255);
+  color: #333333;
+
   /* margin-right: 30px; */
   animation: pulsate 2.5s infinite alternate;
   
