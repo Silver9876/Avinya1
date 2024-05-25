@@ -293,10 +293,13 @@ animation: pulsate 2.5s infinite alternate;
   .contact{
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: row-reverse !important;
     /* margin-bottom: 30px; */
   }
   
   .contact .container1{
+    width: auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -388,6 +391,8 @@ animation: pulsate 2.5s infinite alternate;
       font-weight: 700;
   
   }
+
+
   
   
   /* footer */
@@ -851,18 +856,25 @@ time {
 
 /*------------ contact us----------- */
 .contact{
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
   height: auto;
   /* margin-bottom: 30px; */
   padding: 12px;
+  display: flex;
+  flex-direction: column-reverse;
+justify-content: space-around;
 }
 
 .contact .container1{
+  width: 100%;
   min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  flex-direction: column;
 
 }
 .contact .container1 form {
@@ -945,6 +957,32 @@ border: 3px solid orange;
     transition: .5s ease-in-out;
     animation: boxshadow 2.5s infinite alternate;
 
+}
+
+.contact .container2{
+  margin-top: 30px;
+  width: 100%;
+  min-height: 50vh;
+  display: grid;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact .container2 div{
+  width: auto;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffff;
+}
+
+.contact .container2 .icon{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 
